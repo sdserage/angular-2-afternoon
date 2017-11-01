@@ -4,7 +4,7 @@ angular.module('devmtnTravel').controller('bookedCtrl', function( $scope, $state
 
     if($stateParams.id) {
       $scope.packageIndex = $scope.allPackages.findIndex(package => {
-        return package.id === parseInt($stateParams);
+        return package.id === parseInt($stateParams.id);
       });
 
       if($scope.packageIndex !== -1) {
