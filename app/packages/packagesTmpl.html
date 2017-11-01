@@ -1,6 +1,7 @@
-<section class="packages-main">
+<section class="packages-main"
+ng-style="packages.length > 3 ? {'flex-flow':'wrap'} : {'flex-flow':'nowrap'}">
   <section class="package-card" ng-repeat="package in packages">
-    <img ng-src="{{package.image}}" alt="{{package.city}}" />
+    <img ng-src="{{package.image}}" alt="{{package.city}}" ng-style="packages.length > 3 ? {'width': '45vw'} : {'width': 'inherit'}"/>
 
     <h6>{{package.city}}</h6>
     <h1>{{package.country}}</h1>
