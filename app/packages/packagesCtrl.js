@@ -7,6 +7,8 @@ angular.module('devmtnTravel').controller('packagesCtrl', function( $scope, $sta
       $scope.packages = $scope.allPackages.filter(package=>{
         return package.country === $stateParams.country;
       });
+    } else {
+      $scope.packages = $scope.allPackages;
     }
   });
 });
